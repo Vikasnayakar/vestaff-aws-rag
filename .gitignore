@@ -1,0 +1,16 @@
+# Environments
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Data and Models
+data/
+documents/
+*.db
+*.sqlite3
+
+# Secrets
+.env
