@@ -119,6 +119,29 @@ Average response latency
 Number of unanswered queries
 Frequently asked questions
 
+Design Decisions
+
+Example:
+
+Chunking Strategy
+
+I used RecursiveCharacterTextSplitter with a chunk size of 400 characters and overlap of 50 characters. This helps maintain enough context between chunks while avoiding unnecessary large inputs to the LLM.
+
+Embedding Model
+
+Sentence Transformer (all-MiniLM-L6-v2) was selected because it provides lightweight semantic embeddings suitable for document retrieval.
+
+Vector Database
+
+FAISS was used because it provides fast similarity search and does not require external hosting.
+
+Retrieval
+
+The system retrieves the most relevant document chunk using similarity search before generating the final response.
+
+LLM Choice
+
+Ollama with Llama 3.2 was used as a local model to avoid paid API dependency.
 
 Example Questions :
 
